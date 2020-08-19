@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Pokemon fight</h1>
+<p>Combattez les pokemons de votre adversaire et remportez le tournoi!</p>
+
+<p>Merci de choisir ou de créer une Aréne:</p>
+
+<% @arenes.each do |arene| %>
+  <%= link_to arene.name, arene_path(arene.id) %> - 
+<% end %><br><hr><br>
+
+<%= link_to "Creer une aréne", new_arene_path %>

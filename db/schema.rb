@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_192312) do
+ActiveRecord::Schema.define(version: 2020_08_19_193436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "arenes", force: :cascade do |t|
+    t.string "name"
+    t.string "dispo"
+    t.integer "joueur1_id"
+    t.integer "joueur2_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

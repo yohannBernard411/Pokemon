@@ -1,0 +1,2 @@
+class Arene < ApplicationRecord
+end
